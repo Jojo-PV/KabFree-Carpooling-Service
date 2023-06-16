@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carpooling Service</title>
+  <style>
+    body {
+      background-color: #303030;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    #map {
+      height: 400px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    label {
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      width: 300px;
+      margin-bottom: 10px;
+    }
+    
+    button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #008080;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Carpooling Service</h1>
+  <div id="map"></div>
+  <form id="route-form">
+    <label for="pickup-input">Pickup Location:</label>
+    <input type="text" id="pickup-input" required>
+    <label for="drop-input">Drop Location:</label>
+    <input type="text" id="drop-input" required>
+    <button type="button" id="map_submit" onclick="redirect_to_ui()">Calculate Route</button>
+  </form>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd0Atb-b4-9DIG4atzZ2Y0m22_cTHpLnQ&callback=initMap" async defer></script>
+  <script src="/static/map.js"></script>
+</body>
+</html> 

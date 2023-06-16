@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../static/login.css">
+    <script src="../static/login.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <!--{% if 'username' in session %}
+            <p>You are already logged in as {{ session['username'] }}. <a href="/logout">Logout</a></p>
+        {% else %}
+            {% if error %}
+                <p>{{ error }}</p>
+            {% endif %}-->
+            <!--<img width="50" height="50" src="{{ url_for('static', filename='red_car.jpg') }}" alt="Red Car">-->
+            <form>
+                <label for="username">Username:</label>
+                <br>
+                <input type="text" id="username" name="username" required>
+                <br><br>
+                <label for="password">Password:</label>
+                <br>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+                <input type="button" id="submit" value="Login" onclick="check_login()">
+            </form>
+            <p>Don't have an account? <a href="/register">Register</a></p>
+        <!--{% endif %}-->
+    </div>
+</body>
+</html>
